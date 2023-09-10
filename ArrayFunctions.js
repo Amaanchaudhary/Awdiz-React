@@ -3,7 +3,6 @@
 var arr1 = [1 , 3, 45, 5];
 var val = arr1.pop();   //pop returns the removed element.
 console.log(val, arr1)
-*/
 
 /*
 // unshift()   It adds the new element in the array at beginning
@@ -46,5 +45,4 @@ var arr = [1 , 3 , 5 , 6]
 
 arr.forEach(e => {
     console.log(e * 2)   //syntax 2
-})ax 2
 })
