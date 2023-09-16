@@ -7,6 +7,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#buttonlike:hover {
+  background-color: rgb(35, 183, 35);
+  color: white;
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+}
+#likes{
+  font-size: 50px;
+  font-family: cursive;
+}
+#buttondislike:hover {
+  background-color: red;
+  color: white;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+}
+
+#button:hover {
+  background-color: aqua;
+  height: 40px;
+  width: 150px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
