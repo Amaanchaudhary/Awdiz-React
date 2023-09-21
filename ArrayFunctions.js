@@ -126,7 +126,7 @@ console.log(result2);
 */
 
 //join() it will concat all the elements in an arrays and return a new string separates by commas
-
+/*
 var arr = ['i am','Amaan',45,]
 
  
@@ -135,3 +135,4 @@ var arr = ['i am','Amaan',45,]
 var result = arr.join(' ')     //between space
 
 console.log(result);
+*/

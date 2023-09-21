@@ -7,7 +7,8 @@ const Params = () => {
     return(
         <div>
             <h1>Params</h1>
-            <button onClick={()=> rout("/singleProduct/8888888") }>Click to go single product</button>
+            <button onClick={()=> rout("/singleProduct/8888888/T-shirts") }>Click to go single product</button>
+            <button onClick={()=> rout("/") }>Goto HomePage</button>
         </div>
     )
 }

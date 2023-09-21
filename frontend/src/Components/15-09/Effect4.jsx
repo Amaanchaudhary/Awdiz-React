@@ -11,11 +11,12 @@ const Effect4Func = () => {
 
     useEffect(() => {
         alert("Effect 4 ")
-    } , [Counter1 , Counter2])
+    }, [Counter1, Counter2])
     return (
+        // Fragement <> </>  Using this we can able to return multiple divs
         <>
             <div>
-                <h1>Effect 4</h1>
+                <h1>Effect 4  & Fragments</h1>
                 <button onClick={() => rout("/")}>Go to Home</button>
                 <h1>1Counter - {Counter1}</h1>
                 <h1>2Counter - {Counter2}</h1>
@@ -23,10 +24,10 @@ const Effect4Func = () => {
                 <button onClick={() => SetCounter2((PreValue2) => PreValue2 + 1)}>2Counter +</button>
             </div>
             <div>
-                <h2>Amaan</h2>
+                <h2>2nd Div</h2>
             </div>
             <div>
-                3Div
+                3rd Div
             </div>
         </>
     )

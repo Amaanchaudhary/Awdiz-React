@@ -11,10 +11,16 @@ import Effect3Func from './Components/15-09/Effect3';
 import Effect4Func from './Components/15-09/Effect4';
 import Params from './Components/15-09/Params';
 import SingleProduct from './Components/15-09/SingleProduct';
-
+import Mapping from './Components/16-09/Mapping';
+import Ternary from './Components/16-09/Ternary'
+import { useState } from 'react';
+import StyledComponent from './Components/16-09/StyledComponent'
 
 
 function App() {
+
+  const [LoggedIn, setloggedIn] = useState(false);
+
   return (
     <div className="App">
       <Routes>
@@ -28,7 +34,10 @@ function App() {
         <Route exact path='/effect3' element={<Effect3Func/>}/>
         <Route exact path='/effect4' element={<Effect4Func/>} />
         <Route exact path='/params' element={<Params/>} />
-        <Route exact path='/singleproduct/:id/' element={<SingleProduct/>} />
+        <Route exact path='/singleproduct/:id/:name' element={<SingleProduct/>} /> 
+        <Route exact path='/mapping' element={<Mapping kuchbhi={"hi"}  names={["amaan","rushan","faez", 123]}/>} />
+        <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setloggedIn={setloggedIn} />}/>
+        <Route exact path='/styledcomponent' element={<StyledComponent/>}/>
       </Routes>
     </div>
   );

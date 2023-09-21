@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const Effect3Func = () => {
 
-    const rout = useNavigate;
+    const rout = useNavigate();
     const [Counter1, SetCounter1] = useState(0)
     const [Counter2, SetCounter2] = useState(0)
 
