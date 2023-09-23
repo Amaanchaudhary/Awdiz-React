@@ -15,6 +15,11 @@ import Mapping from './Components/16-09/Mapping';
 import Ternary from './Components/16-09/Ternary'
 import { useState } from 'react';
 import StyledComponent from './Components/16-09/StyledComponent'
+import StateAndEffect from './Components/16-09/StateAndEffect';
+import DynamicStyle from './Components/20-09/DynamicStyle'
+import ChildrenProps from './Components/22-09/ChildrenProps';
+import RegisterReact from './Components/22-09/RegisterReact';
+
 
 
 function App() {
@@ -35,9 +40,13 @@ function App() {
         <Route exact path='/effect4' element={<Effect4Func/>} />
         <Route exact path='/params' element={<Params/>} />
         <Route exact path='/singleproduct/:id/:name' element={<SingleProduct/>} /> 
-        <Route exact path='/mapping' element={<Mapping kuchbhi={"hi"}  names={["amaan","rushan","faez", 123]}/>} />
+        <Route exact path='/mapping' element={<Mapping kuchbhi={"hi"}  names={["amaan","Amaan2","Amaan3", 123]}/>} />
         <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setloggedIn={setloggedIn} />}/>
         <Route exact path='/styledcomponent' element={<StyledComponent/>}/>
+        <Route exact path='/state&effect' element={<StateAndEffect/>}/> 
+        <Route exact path='dynamicstyle' element={<DynamicStyle/>}/>
+        <Route exact path='childrenprops' element={<ChildrenProps/>} />
+        <Route exact path='registerreact' element={<RegisterReact/>} />
       </Routes>
     </div>
   );

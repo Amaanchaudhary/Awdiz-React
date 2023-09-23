@@ -1,0 +1,16 @@
+.ActiveButton{
+    background-color: rgb(20, 190, 20);
+    color:white;
+    height: 50px;
+    font-size: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+.InActiveButton{
+    background-color: grey;
+    color: white;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 180px;
+}

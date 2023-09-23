@@ -11,7 +11,8 @@ const Effect4Func = () => {
 
     useEffect(() => {
         alert("Effect 4 ")
-    }, [Counter1, Counter2])
+    }, [Counter1, Counter2])//Multiple Dependency
+    // Type 4, on initial render and when Counter1 & Counter2 changes
     return (
         // Fragement <> </>  Using this we can able to return multiple divs
         <>
