@@ -29,6 +29,7 @@ function Homepage() {
             <button onClick={() => rout("/dynamicstyle")}>Go to Dynamic Style</button>
             <button onClick={() => rout("/childrenprops")}>Go to ChildrenProps</button>
             <button onClick={() => rout("/registerreact")} >Go to Register</button>
+            <button onClick={() => rout("/classcomponent")}>Go to Class Component</button>
         </div>
     )
 }

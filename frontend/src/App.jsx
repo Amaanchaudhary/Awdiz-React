@@ -19,6 +19,8 @@ import StateAndEffect from './Components/16-09/StateAndEffect';
 import DynamicStyle from './Components/20-09/DynamicStyle'
 import ChildrenProps from './Components/22-09/ChildrenProps';
 import RegisterReact from './Components/22-09/RegisterReact';
+import ClassComponent from './Components/29-09/ClassComponent';
+import PageNotFound from './Components/29-09/PageNotFound';
 
 
 
@@ -29,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route exact path='*' element={<PageNotFound/>} />
         <Route exact path='/' element={<Homepage />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/register' element={<Register />} />
@@ -47,6 +50,7 @@ function App() {
         <Route exact path='dynamicstyle' element={<DynamicStyle/>}/>
         <Route exact path='childrenprops' element={<ChildrenProps/>} />
         <Route exact path='registerreact' element={<RegisterReact/>} />
+        <Route exact path='classcomponent' element={<ClassComponent/>}/>
       </Routes>
     </div>
   );
