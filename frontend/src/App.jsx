@@ -21,6 +21,7 @@ import ChildrenProps from './Components/22-09/ChildrenProps';
 import RegisterReact from './Components/22-09/RegisterReact';
 import ClassComponent from './Components/29-09/ClassComponent';
 import PageNotFound from './Components/29-09/PageNotFound';
+import Product from './Components/30-09/Product'
 
 
 
@@ -51,6 +52,7 @@ function App() {
         <Route exact path='childrenprops' element={<ChildrenProps/>} />
         <Route exact path='registerreact' element={<RegisterReact/>} />
         <Route exact path='classcomponent' element={<ClassComponent/>}/>
+        <Route exact path='product' element={<Product/>} />
       </Routes>
     </div>
   );

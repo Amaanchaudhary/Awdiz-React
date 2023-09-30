@@ -1,4 +1,5 @@
 import {useNavigate} from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 
 function Homepage() {
@@ -30,6 +31,9 @@ function Homepage() {
             <button onClick={() => rout("/childrenprops")}>Go to ChildrenProps</button>
             <button onClick={() => rout("/registerreact")} >Go to Register</button>
             <button onClick={() => rout("/classcomponent")}>Go to Class Component</button>
+            <button onClick={() => toast.success("Clicked")} >Click to toast succes</button>
+            <button onClick={() => toast.error("Clicked")} >Click to toast Error</button>
+            <button onClick={() => rout("/product")} >Go to Product</button>
         </div>
     )
 }

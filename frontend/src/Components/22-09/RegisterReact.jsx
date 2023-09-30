@@ -1,5 +1,7 @@
 import { useState } from "react"
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const RegisterReact = () => {
 
@@ -11,7 +13,7 @@ const RegisterReact = () => {
     const HandleChange = (event) => {
         // console.log(event.target.value, "- value,", event.target.name, "- name")
 
-        setUserData({...userData, [event.target.name]: event.target.value });
+        setUserData({ ...userData, [event.target.name]: event.target.value });
     }
 
     const sendDataToBackend = async (event) => {
@@ -19,22 +21,29 @@ const RegisterReact = () => {
         // alert("Data Submitted to backend")
         if (userData.Name && userData.Email && userData.Password) {
             if (userData.Password.length >= 8) {
-                // const response = await axios.post("http/localhost:8000/register",{userData})
-                const response = {data: {success : true}}
-                if(response.data.success){
-                    alert("Register Successfull.")
-                    setUserData({Name : "" , Email : "" , Password : ""})   
-                    rout("/")
-                }else{
-                    alert(response.data.error)
+                try {
+                    const response = await axios.post("http/localhost:8000/register", { userData })
+                    // const response = {data: {success : true}}
+                    if (response.data.success) {
+                        alert("Register Successfull.")
+                        setUserData({ Name: "", Email: "", Password: "" })
+                        rout("/")
+                    } else {
+                        throw new Error("Something went wrong")
+                    }
                 }
-            } 
-            else {
-                alert("passwword must be minimum 8 digit")
+                catch (error) {
+                    toast.error(error?.message)
+                    console.log(error, "error-hai")
+                }
             }
-        } 
+            else {
+                toast.error("Password must be 8 digit")
+            }
+        }
+
         else {
-            alert("All fields are mandatory!")
+            toast.error("All fields are mandatory!")
         }
     }
 
