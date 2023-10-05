@@ -23,6 +23,7 @@ import ClassComponent from './Components/29-09/ClassComponent';
 import PageNotFound from './Components/29-09/PageNotFound';
 import Product from './Components/30-09/Product'
 import SingleProductNew from './Components/01-10/SingleProductNew'
+import AddProduct from './Components/04-10/AddProduct';
 
 
 
@@ -49,12 +50,13 @@ function App() {
         <Route exact path='/ternary' element={<Ternary isUserLoggedIn={LoggedIn} setloggedIn={setloggedIn} />}/>
         <Route exact path='/styledcomponent' element={<StyledComponent/>}/>
         <Route exact path='/state&effect' element={<StateAndEffect/>}/> 
-        <Route exact path='dynamicstyle' element={<DynamicStyle/>}/>
-        <Route exact path='childrenprops' element={<ChildrenProps/>} />
-        <Route exact path='registerreact' element={<RegisterReact/>} />
-        <Route exact path='classcomponent' element={<ClassComponent/>}/>
-        <Route exact path='product' element={<Product/>} />
-        <Route exact path='single-product/:id' element={<SingleProductNew/>} />
+        <Route exact path='/dynamicstyle' element={<DynamicStyle/>}/>
+        <Route exact path='/childrenprops' element={<ChildrenProps/>} />
+        <Route exact path='/registerreact' element={<RegisterReact/>} />
+        <Route exact path='/classcomponent' element={<ClassComponent/>}/>
+        <Route exact path='/product' element={<Product/>} />
+        <Route exact path='/single-product/:id' element={<SingleProductNew/>} />
+        <Route exact path='/addproduct' element={<AddProduct/>}/>
       </Routes>
     </div>
   );

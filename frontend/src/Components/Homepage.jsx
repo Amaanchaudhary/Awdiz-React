@@ -34,6 +34,7 @@ function Homepage() {
             <button onClick={() => toast.success("Clicked")} >Click to toast succes</button>
             <button onClick={() => toast.error("Clicked")} >Click to toast Error</button>
             <button onClick={() => rout("/product")} >Go to Product</button>
+            <button onClick={() => rout("/addproduct")} >Go to Add Product</button>
         </div>
     )
 }
