@@ -39,11 +39,11 @@ const AddProduct = () => {
             <form onSubmit={handleSubmit}>
                 <h1>Add Product</h1>
                 <label>Product Title</label><br/>
-                <input type='text' onChange={handleChange} name='Title' /><br/>
+                <input type='text' onChange={handleChange} name='Title' value={ProductData.Title} /><br/>
                 <label>Product Price</label><br/>
-                <input type='number' onChange={handleChange} name='Price' /><br/>
+                <input type='number' onChange={handleChange} name='Price' value={ProductData.Price} /><br/>
                 <label>Product Image</label><br/>
-                <input type='url' onChange={handleChange} name='Image' /><br/><br/>
+                <input type='url' onChange={handleChange} name='Image' value={ProductData.Image} /><br/><br/>
                 <input type='submit' />
             </form>
         </div>

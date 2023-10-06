@@ -24,6 +24,7 @@ import PageNotFound from './Components/29-09/PageNotFound';
 import Product from './Components/30-09/Product'
 import SingleProductNew from './Components/01-10/SingleProductNew'
 import AddProduct from './Components/04-10/AddProduct';
+import UseMemo from './Components/06-10/UseMemo'
 
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route exact path='/product' element={<Product/>} />
         <Route exact path='/single-product/:id' element={<SingleProductNew/>} />
         <Route exact path='/addproduct' element={<AddProduct/>}/>
+        <Route exact path='/usememo' element={<UseMemo/>}/>
       </Routes>
     </div>
   );
