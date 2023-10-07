@@ -36,6 +36,7 @@ function Homepage() {
             <button onClick={() => rout("/product")} >Go to Product</button>
             <button onClick={() => rout("/addproduct")} >Go to Add Product</button>
             <button onClick={() => rout("/usememo")} >Go to UseMemo</button>
+            <button onClick={() => rout("/usecallback")} >Go to UseCallBack</button>
         </div>
     )
 }
