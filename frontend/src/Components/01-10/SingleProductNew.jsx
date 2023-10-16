@@ -25,6 +25,7 @@ const SingleProductNew = () => {
     }, [id])
 
     console.log(productData, " product data ");
+    
     return (
         <div>
 

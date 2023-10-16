@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Effect3Func = () => {
 
@@ -9,7 +10,8 @@ const Effect3Func = () => {
     const [Counter2, SetCounter2] = useState(0)
 
     useEffect(() => {
-        alert("useEffect 3 - When Counter1 change")
+        // alert("useEffect 3 - When Counter1 change")
+        toast.success("useEffect 3 - When Counter1 change")
     }, [Counter1])//Dependency
 
     // Type 3, on initial render and when Counter1 changes

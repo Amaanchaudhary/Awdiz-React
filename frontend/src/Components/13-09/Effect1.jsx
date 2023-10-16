@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Effect1Func = () => {
 
@@ -9,7 +10,8 @@ const Effect1Func = () => {
     const [Counter , SetCounter] = useState(0);
     
     useEffect(() => {
-        alert("Page Rendered");
+        // alert("Page Rendered");
+        toast.success("Page Rendered")
     })
 
     //it'll execute the function on every render and render causes bcoz of first render, reload and state change

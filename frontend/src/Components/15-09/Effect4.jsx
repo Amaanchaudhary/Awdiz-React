@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Effect4Func = () => {
 
@@ -10,9 +11,13 @@ const Effect4Func = () => {
     const [Counter2, SetCounter2] = useState(0)
 
     useEffect(() => {
-        alert("Effect 4 ")
+        // alert("Effect 4 ")
+
+        toast.success("Effect 4 ")
     }, [Counter1, Counter2])//Multiple Dependency
+
     // Type 4, on initial render and when Counter1 & Counter2 changes
+    
     return (
         // Fragement <> </>  Using this we can able to return multiple divs
         <>

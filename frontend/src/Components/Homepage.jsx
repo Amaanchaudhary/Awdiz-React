@@ -44,6 +44,8 @@ function Homepage() {
             <button onClick={() => rout("/usememo")} >Go to UseMemo</button>
             <button onClick={() => rout("/usecallback")} >Go to UseCallBack</button>
             <button onClick={() => rout("/testreducer")} >Go to TestReducer</button>
+            <button onClick={() => rout("/customhook")} >Go to Custom Hook</button>
+            <button onClick={() => rout("/customhookls")} >Go to Custom Hook LS</button>
         </div>
     )
 }

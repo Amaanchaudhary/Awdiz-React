@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Effect2Func = () => {
 
@@ -9,7 +10,8 @@ const Effect2Func = () => {
     const [Counter, SetCounter] = useState(0);
 
     useEffect(() => {
-        alert("UseEffect2")
+        // alert("UseEffect2")
+        toast.success("Page Rendered")
     }, [])
 
     //useEffect 2nd type, it'll execute the code only on first render of component.

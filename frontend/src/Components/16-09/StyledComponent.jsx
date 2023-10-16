@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const StyledComponent = () => {
+
     const Button = styled.button`
     color: white;
     width: 200px;
@@ -10,9 +11,16 @@ const StyledComponent = () => {
     background-color : red;
     `
 
+    const H1 = styled.h1`
+    background-color : blue;
+    font-size : 19px;
+    color : white;
+    `
+ 
     return (
         <div style={{border: "2px solid blue",backgroundColor: "grey"}}>
             <Button>Styled Component</Button>
+            <H1>Styled H1</H1>
         </div>
     )
 }

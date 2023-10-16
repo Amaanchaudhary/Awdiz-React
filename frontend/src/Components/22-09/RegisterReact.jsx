@@ -22,10 +22,10 @@ const RegisterReact = () => {
         if (userData.Name && userData.Email && userData.Password) {
             if (userData.Password.length >= 8) {
                 try {
-                    const response = await axios.post("http/localhost:8000/register", { userData })
-                    // const response = {data: {success : true}}
+                    // const response = await axios.post("http://localhost:8000/register", { userData });
+                    const response = {data: {success : true}}
                     if (response.data.success) {
-                        alert("Register Successfull.")
+                        toast.success("Register Successfull.")
                         setUserData({ Name: "", Email: "", Password: "" })
                         rout("/")
                     } else {

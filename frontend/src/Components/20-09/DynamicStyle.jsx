@@ -17,7 +17,8 @@ const DynamicStyle = () => {
             <button className={ButtonClassName} onClick={handleButtonClick}>
                 {isButtonActive ? "Active-Button" : "InActive-Button"}
             </button>
-            { isButtonActive &&<h2>Button is Active Now</h2>}
+
+            { isButtonActive && <h2>Button is Active Now</h2>} 
         </div>
     )
 }
