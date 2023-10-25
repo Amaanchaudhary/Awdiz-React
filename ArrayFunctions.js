@@ -136,3 +136,40 @@ var result = arr.join(' ')     //between space
 
 console.log(result);
 */
+
+/*
+//Slice();
+// The slice() method returns selected elements in an array, as a new array.
+// The slice() method selects from a given start, up to a (not inclusive) given end.
+// The slice() method does not change the original array.
+var arr = ['pizza' , 'burger' , 'salad'];
+// Optional.
+// Start position. Default is 0. & same for end
+const food = arr.slice(0,2);    //(start , end); 
+
+console.log(food);
+*/
+
+/*
+//splice() method can del or add items in an array and modifies the original array.
+// An array containing the removed items (if any).
+
+var arr = ["Banana", "Orange", "Apple"];
+
+arr.splice(1,0,"mango" , "kiwi") //from index 1, add 2 element, and 0 is for no deletion 
+
+console.log(arr);  
+
+arr.splice(2,1);  //from index 2, remove 1 items:
+//index is required , other 2 val is optional
+console.log(arr);  
+*/
+
+
+var nums = [1 , 1 , 2]
+
+var a = nums.shift();
+
+nums.push(a);
+
+console.log(nums);
