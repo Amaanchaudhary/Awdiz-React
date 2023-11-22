@@ -1,0 +1,11 @@
+Cors Connection
+to connect backend server with frontend use cors
+npm i cors 
+step 1 : import cors from 'cors'
+step 2 : app.use(cors())
+
+HTTP Methods
+POST         - Create  - User Creation
+Get          - Read    - Read Products 
+PUT/PATCH    - 
+DELETE       - 

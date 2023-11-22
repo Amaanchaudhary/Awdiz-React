@@ -2,11 +2,13 @@ import {useNavigate} from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useContext } from 'react';
 import { MyContext } from '../Context/GlobalContext';
+import { AuthContext } from '../Context/AuthContext';
 
 
 function Homepage() {
 
-   const {state , dispatch} = useContext(MyContext)
+//    const {state , dispatch} = useContext(MyContext)
+    const {state } = useContext(AuthContext)
 
     const rout = useNavigate();
 
@@ -17,8 +19,9 @@ function Homepage() {
     return (
         <div>
             <h1>Homepage for Awdiz</h1>
-            <h1>Counter : {state.count}</h1>
-            <button onClick={() => dispatch({type : "Increment"})} >Increment+</button><br/><br/>   
+            <h1>User : {state?.user?.name}</h1>
+            {/* <h1>Counter : {state.count}</h1> */}
+            {/* <button onClick={() => dispatch({type : "Increment"})} >Increment+</button><br/><br/>    */}
             <button onClick={() => rout("/login")}>Go to Login</button>
             <button onClick={goToRegister}>Go to Register</button>
             <button onClick={() => rout("/profile")}>Go to Profile</button>
