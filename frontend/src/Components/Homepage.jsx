@@ -8,7 +8,7 @@ import { AuthContext } from '../Context/AuthContext';
 function Homepage() {
 
 //    const {state , dispatch} = useContext(MyContext)
-    const {state } = useContext(AuthContext)
+    const {state , Logout} = useContext(AuthContext)
 
     const rout = useNavigate();
 
@@ -48,7 +48,8 @@ function Homepage() {
             <button onClick={() => rout("/usecallback")} >Go to UseCallBack</button>
             <button onClick={() => rout("/testreducer")} >Go to TestReducer</button>
             <button onClick={() => rout("/customhook")} >Go to Custom Hook</button>
-            <button onClick={() => rout("/customhookls")} >Go to Custom Hook LS</button>
+            <button onClick={() => rout("/customhookls")} >Go to Custom Hook LS</button><br/><br/>
+            <button onClick={() => {Logout()}}>Logout</button>
         </div>
     )
 }
