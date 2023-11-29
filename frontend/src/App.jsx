@@ -29,6 +29,9 @@ import UseCallBack from './Components/07-10/UseCallBack';
 import TestReducer from './Components/08-10/TestReducer'
 import CustomHook from './Components/13-10/CustomHook';
 import CustomHookLS from './Components/13-10/CustomHookLS';
+import YourProducts from './Components/24-11/YourProducts';
+import UpdateProduct from './Components/25-11/UpdateProduct';
+
 
 
 function App() {
@@ -66,6 +69,8 @@ function App() {
         <Route exact path='/testreducer' element={<TestReducer/>}/>
         <Route exact path='/customhook' element={<CustomHook/>} />
         <Route exact path='/customhookls' element={<CustomHookLS/>} />
+        <Route exact path='/yourproducts' element={<YourProducts/>} />
+        <Route exact path='/updateproduct/:id' element={<UpdateProduct/>} />
       </Routes>
     </div>
   );
