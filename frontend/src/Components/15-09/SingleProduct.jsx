@@ -7,6 +7,7 @@ const SingleProduct = () => {
     const rout = useNavigate();
 
     const {id} = useParams();
+    alert(id)
     const {name} = useParams();
     return (
         <div>

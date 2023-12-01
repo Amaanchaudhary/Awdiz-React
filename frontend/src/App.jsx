@@ -31,6 +31,8 @@ import CustomHook from './Components/13-10/CustomHook';
 import CustomHookLS from './Components/13-10/CustomHookLS';
 import YourProducts from './Components/24-11/YourProducts';
 import UpdateProduct from './Components/25-11/UpdateProduct';
+import Navbar from './Components/Common/Navbar';
+import Cart from './Components/26-11/Cart';
 
 
 
@@ -39,6 +41,8 @@ function App() {
   const [LoggedIn, setloggedIn] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <div className="App">
       <Routes>
         <Route exact path='*' element={<PageNotFound/>} />
@@ -71,8 +75,10 @@ function App() {
         <Route exact path='/customhookls' element={<CustomHookLS/>} />
         <Route exact path='/yourproducts' element={<YourProducts/>} />
         <Route exact path='/updateproduct/:id' element={<UpdateProduct/>} />
+        <Route exact path='/cart' element={<Cart/>} />
       </Routes>
     </div>
+    </>
   );
 }
 

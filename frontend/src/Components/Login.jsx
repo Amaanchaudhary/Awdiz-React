@@ -10,6 +10,7 @@ function Login(){
 
     const rout = useNavigate();
     console.log(userData)
+    
     const {Login , state } = useContext(AuthContext)
 
     const HandleChange = (event) => {
@@ -60,9 +61,9 @@ function Login(){
                 <input name='email' type="email" onChange={HandleChange} autoComplete="off" /><br />
 
                 <label>Password</label><br />
-                <input name='password' type="password" onChange={HandleChange} autoComplete="off" /><br />
+                <input name='password' type="password" onChange={HandleChange} autoComplete="off" /><br /><br />
 
-                <input type="Submit" value='Login' /><br />
+                <input type="Submit" value='Login' readOnly/><br />
             </form>
         </div>
     )

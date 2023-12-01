@@ -37,8 +37,8 @@ const Product = () => {
 
             {Products?.length ?
                 <div id="main" >{Products.map((pro) => (
-                    <div onClick={() => rout(`/single-product/${pro.id}`)} className="body">
-                        <img className="images" src={pro.image} />
+                    <div onClick={() => rout(`/single-product/${pro._id}`)} className="body">
+                        <img className="images" src={pro.image} />  
                         <h3>Name : {pro.name}</h3>
                         <h4>Price : {pro.price} $</h4>
                         <p>Category : {pro.category}</p>
