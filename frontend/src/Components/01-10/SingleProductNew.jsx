@@ -67,8 +67,7 @@ const SingleProductNew = () => {
                     </div>
                 </div>
                 :
-                <div>Loading...</div>}
-
+                <div>Loading...</div>}  
         </div >
     )
 }

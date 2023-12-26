@@ -12,7 +12,7 @@ const Cart = () => {
     console.log(cartProducts)
     // alert(state?.user?.id)
 
-    async function getYourCartProduct() {
+    async function getYourCartProduct(){
         try {
             // alert(state?.user?.id)
             const response = await api.post("/user/all-cart-products", { id: state?.user?.id })
