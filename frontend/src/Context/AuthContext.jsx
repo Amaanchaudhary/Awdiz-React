@@ -9,8 +9,8 @@ const reducer = (state, action) => {
             return { ...state, user: action.payload }
         case "LOGOUT":
             localStorage.removeItem("My-token")
-            return { ...state, user: null }
             alert("Logout Succesfull.")
+            return { ...state, user: null }
         default:
             return state
     }

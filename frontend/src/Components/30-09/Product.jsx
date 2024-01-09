@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react";
-import toast from "react-hot-toast";
+import toast from "react-hot-toast";    
 import axios from "axios";
 import './Product.css'
 import { useNavigate } from "react-router-dom";

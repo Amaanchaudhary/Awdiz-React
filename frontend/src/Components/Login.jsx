@@ -56,7 +56,6 @@ function Login(){
         <div>
             <form onSubmit={sendDataToBackend} autoComplete="off" >
                 <h1>Login</h1>
-
                 <label>Email</label><br />
                 <input name='email' type="email" onChange={HandleChange} autoComplete="off" /><br />
 

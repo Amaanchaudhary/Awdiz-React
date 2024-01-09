@@ -165,11 +165,19 @@ arr.splice(2,1);  //from index 2, remove 1 items:
 console.log(arr);  
 */
 
+// var nums = [1 , 1 , 2]
+// var a = nums.shift();
+// nums.push(a);
+// console.log(nums);
 
-var nums = [1 , 1 , 2]
+// Swap two number without third varible.
 
-var a = nums.shift();
+// let a = 6
+// let b = 5
 
-nums.push(a);
+// a = a + b;  // a = 11
+// b = a - b   // 11 - 5 =  b = 6
+// a = a - b   // 11 - 6 =  a = 5
 
-console.log(nums);
+// console.log(a, b)
+

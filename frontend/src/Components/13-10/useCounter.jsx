@@ -13,6 +13,7 @@ const useCounter = (InitialState = 0) => {
     function Reset(){
         setCounter(0)
     }
+    
     return [counter, Increment , Decrement , Reset];
 }
 
