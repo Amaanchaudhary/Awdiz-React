@@ -69,7 +69,7 @@ const SingleProductNew = () => {
                 :
                 <div>Loading...</div>}  
         </div >
-    )
+    )   
 }
 
 export default SingleProductNew

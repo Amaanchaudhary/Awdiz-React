@@ -181,3 +181,24 @@ console.log(arr);
 
 // console.log(a, b)
 
+// Q1. console.log("a"+"b" + +  "c" + "d")  // ans - abNaNd
+
+//Q2
+// console.log(a) 
+// var a = "abc"        //ans - in var - undefined , let & const - error
+
+// Q3 first call the function then define will it give an error on run
+
+// hii()                      //No error , but if the function is arrow then error
+// function hii(){     
+//     console.log("hello")
+// }
+
+// Q4     pehle andar wala log sahi se print hojayega then bahar wala undefined
+// console.log(console.log("abc"))   // ans - abc then undefined
+
+// Q5
+// console.log(NaN == NaN)   //false , typeof = number
+
+// Q6 find count of only upperCase alphabets and lowerCase alphabets in a string 
+	// let str = "Hello World @$ "

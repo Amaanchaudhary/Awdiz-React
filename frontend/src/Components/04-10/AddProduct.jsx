@@ -48,11 +48,11 @@ const AddProduct = () => {
     // console.log(state , "state")
 
     useEffect(() => {
-        if (state?.user && state.user.name == undefined) {
-            rout("/login")
+        if (!state?.user?.id) {
             toast.error("Please login to access this page")
+            rout("/login")
         }
-        },[state])
+        },[state.user.id])
 
     return (
         <div>
