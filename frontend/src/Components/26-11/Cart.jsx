@@ -33,7 +33,6 @@ const Cart = () => {
             // console.log( state?.user?.id , "id")
             const response = await api.post("/user/delete-cart-product" , {userId : state?.user?.id , productId : id})
             if(response.data.success){
-                
                 toast.success(response.data.message)
                 setCartProducts(response.data.products)
             }

@@ -202,3 +202,13 @@ console.log(arr);
 
 // Q6 find count of only upperCase alphabets and lowerCase alphabets in a string 
 	// let str = "Hello World @$ "
+
+
+// console.log(arr)
+
+// var arr = 10; //In hoisting only declaration hoisted to the top , not assignment
+// // const arr = 10  const and let cannot get hoisted and give error cannot access arr bfore initialization
+// // let arr = 10
+
+// console.log(arr)
+

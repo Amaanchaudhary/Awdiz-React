@@ -29,6 +29,7 @@ const Product = () => {
                 toast.error(error.data.message)
             }
         }
+        
         getProduct()
     }, [])
 
