@@ -1,0 +1,27 @@
+.buttons{
+    /* border: 1px solid black;    */
+    width: 70px;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.plus{
+    color: white;
+    font-size: 17px;
+    background-color: rgb(0, 68, 255);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.minus{
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border: none;
+}

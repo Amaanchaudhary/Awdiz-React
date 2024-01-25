@@ -212,3 +212,14 @@ console.log(arr);
 
 // console.log(arr)
 
+var name = 'jack and jones'
+// const myarray = name.split(" ")
+// console.log(myarray)
+// const slug = myarray.join("-")
+// console.log(slug)
+
+var str = name.replace(/ /g , '-')
+console.log(str);
+
+
+
