@@ -1,25 +1,26 @@
-import { useDispatch, useSelector } from 'react-redux'  //step 10: import useDispatch from react-redux
+import {useDispatch, useSelector } from 'react-redux' //step 11: import useDispatch 
 import './Control.css'
 import { useRef } from 'react'
+import { counterActions } from '../store'
 
 const Control = () => {
 
-    const dispatch = useDispatch()  //step 11 : create instance of useDispatch
+    const dispatch = useDispatch()   //create instance of useDispatch as dispatch keyword
     const inputElement = useRef()
     const privacy = useSelector((store) => store.privacy)
 
     const handleIncrement = () => {
-        dispatch({ type: "INCREMENT" })  //and use dispatch and give type of action.type 
-    }
+        dispatch(counterActions.increment()); //step 10: just import slices of actions and use it by method name
+    }                                                //and dispatch it
     const handleDecrement = () => {
-        dispatch({ type: "DECREMENT" })
+        dispatch(counterActions.decrement());
     }
     const handleAdd = () => {
-        dispatch({ type: "ADD" , payload : {num : inputElement.current.value} })
+        dispatch(counterActions.add(inputElement.current.value))  //direct sending number
         inputElement.current.value = '' //value = blank krdo bhejne k baad
     }
     const handleSubstract = () => {
-        dispatch({ type: "SUBSTRACT" , payload : {num : inputElement.current.value} })
+        dispatch(counterActions.substract({num : inputElement.current.value})) //send as a object
         inputElement.current.value = '' //value = blank krdo bhejne k baad
     }
     const handlePrivacy = () => {
