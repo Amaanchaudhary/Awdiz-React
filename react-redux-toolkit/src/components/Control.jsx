@@ -1,7 +1,8 @@
 import {useDispatch, useSelector } from 'react-redux' //step 11: import useDispatch 
 import './Control.css'
 import { useRef } from 'react'
-import { counterActions } from '../store'
+import { counterActions } from '../store/counter'
+import { privacyActions } from '../store/privacy'
 
 const Control = () => {
 
@@ -24,7 +25,7 @@ const Control = () => {
         inputElement.current.value = '' //value = blank krdo bhejne k baad
     }
     const handlePrivacy = () => {
-        dispatch({ type: "PRIVACY"})
+        dispatch(privacyActions.toggle())
     }
 
     return (
