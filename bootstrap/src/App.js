@@ -1,15 +1,33 @@
 import AddTodo from "./components/AddTodo";
-import AppName from "./components/Heading";
-import TodoItem1 from "./components/TodoItem1";
-import TodoItem2 from "./components/TodoItem2";
+import Heading from "./components/Heading";
+import "./App.css"
+import AllTodoItems from "./components/AllTodoItems";
+import { useState } from "react";
+import WelcomeMsg from "./components/WelcomeMsg";
 
 function App() {
+
+  const [todoitem, setTodoItem] = useState([])
+
+  const handleNewItem = (itemName, itemDueDate) => {
+    const newTodoItems =
+      [...todoitem,
+      { Name:  itemName , dueDate:  itemDueDate }
+      ];
+      setTodoItem(newTodoItems)
+  }
+
+  const handleDelItem = (todoItemName) => {
+    const newTodoItemm = todoitem.filter((item) => item.Name != todoItemName)
+    setTodoItem(newTodoItemm)
+  }
+
   return (
-    <center class="todo-container">
-      <AppName/>
-      <AddTodo/>
-      <TodoItem1/>
-      <TodoItem2/>
+    <center className="todo-container">
+      <Heading />
+      <AddTodo onNewItem={handleNewItem} />
+      {todoitem.length == 0 && <WelcomeMsg></WelcomeMsg>}
+      <AllTodoItems todoItems={todoitem} onDelete={handleDelItem}></AllTodoItems>
     </center>
   );
 }
