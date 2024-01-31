@@ -1,35 +1,25 @@
-import { useRef} from "react"
+import { useContext, useRef} from "react"
 import { IoIosAddCircle } from "react-icons/io";
+import { TodoItemsContext } from "../store/todoItemsStore";
 
-const AddTodo = ({ onNewItem }) => {
+const AddTodo = () => {
 
-  // const [todoName, setTodoName] = useState('')  //no need because we have useRef which donot cause rerender after each value change
-  // const [todoDueDate, setTodoDueDate] = useState('')
-  // const noOfUpdates = useRef(0)  //simple useCase of useRef
+  const {addNewItem} = useContext(TodoItemsContext)
+
   const todoNameElement = useRef()
   const todoDateElement = useRef()
 
-
-  // const handleNameChange = (event) => {     //no need because we have useRef
-  //   setTodoName(event.target.value);
-  //   // noOfUpdates.current += 1            //simple useCase of useRef
-  // }
-
-  // const handleDateChange = (event) => {     //no need because we have useRef
-  //   setTodoDueDate(event.target.value);
-  //   // console.log(noOfUpdates.current)     //simple useCase of useRef
-  // }
-
   const handleAddButton = (event) => {
     event.preventDefault()
+
     const todoName = todoNameElement.current.value
     const todoDueDate = todoDateElement.current.value
+
     if (todoName && todoDueDate) {
-      onNewItem(todoName, todoDueDate)
+      addNewItem(todoName, todoDueDate)
       todoNameElement.current.value = ''
       todoDateElement.current.value = ''
-      // setTodoName("")                        //no need because we have useRef
-      // setTodoDueDate("")                     //no need because we have useRef
+      
     }else{
       alert("All Fields are mandatory")
     }
